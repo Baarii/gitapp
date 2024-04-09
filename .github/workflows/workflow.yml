@@ -1,0 +1,26 @@
+# ASP.NET Core (.NET Framework)
+# Build and test ASP.NET Core projects targeting the full .NET Framework.
+# Add steps that publish symbols, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+name: pipelineWorkflow
+
+on:
+  push :
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+    build:
+      name: Azure pipelineWorkflow
+      runs-on: ubuntu-latest
+      steps:
+      - name: Azure Pipelines Action
+        uses: Azure/pipeliones@v1
+        with:
+          azure-devops-project-url: https://dev.azure.com/baariii/agile%20project
+          azure-pipeline-name: 'Baarii.gitapp'
+          azure-devops-token: ${{ secrets.AZURE_DEVOPS_TOKEN }}
+          
