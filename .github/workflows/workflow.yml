@@ -21,6 +21,5 @@ jobs:
         uses: Azure/pipeliones@v1
         with:
           azure-devops-project-url: https://dev.azure.com/baariii/agile%20project
-          azure-pipeline-name: 'Baarii.gitapp'
+          azure-pipeline-name: 'webapp1'
           azure-devops-token: ${{ secrets.AZURE_DEVOPS_TOKEN }}
-          
