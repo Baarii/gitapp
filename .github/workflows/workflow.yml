@@ -18,7 +18,7 @@ jobs:
       runs-on: windows-latest
       steps:
       - name: Azure Pipelines Action
-        uses: Azure/pipeliones@v1
+        uses: Azure/pipelines@v1
         with:
           azure-devops-project-url: https://dev.azure.com/baariii/agile%20project
           azure-pipeline-name: 'Baarii.gitapp'
